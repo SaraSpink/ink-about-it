@@ -1,24 +1,48 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# _Ink About It_
 
-Things you may want to cover:
+#### _A Web-Comic Publishing Platform_
 
-* Ruby version
+This project is built on Rails
 
-* System dependencies
+#### By _Sara Spink_
 
-* Configuration
+### Description
 
-* Database creation
+_Ink about it is a dedicated web-comics publishing platform. Many people publish their webcomics on Wordpress sites, DeviantArt, and even Reddit. While there are a few publishing platforms already out there, my goal is to create a web application designed for this purpose that is easy to use and which boasts a simple yet attractive user interface._
 
-* Database initialization
+### Process
 
-* How to run the test suite
+I started by sketching out my database schema digitally:
+![first db schema](./public/img/initial_db_sketch.png)
 
-* Services (job queues, cache servers, search engines, etc.)
+### User Stories
 
-* Deployment instructions
+- A user should be able to create a comic with a title and details
+- A user should be able to upload images to their comic and have them display in order
+- Each comic should have navigation buttons to start at the beginning, move forward or back one page, or to select a specific page.
 
-* ...
+### Further Exploration - Stretch Goals
+
+- I want users to be able to leave comments and reviews for other users (a user must be logged in to leave comments)
+- Integrate stripe or similar so artists can accept donations or sell prints
+- Build an Angular front end
+
+### Technologies Used
+
+* Ruby/Rails
+* HTML
+* CSS/SCSS
+* Bootstrap
+* AJAX
+
+
+### Setup
+
+### Support and contact details
+
+_If you have any updates or suggestions please make a contribution to this repository and/or contact [Sara](spinkbot@gmail.com) directly._
+
+### License
+
+_© 2017 InkAboutIt_

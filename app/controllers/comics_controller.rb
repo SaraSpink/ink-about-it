@@ -23,26 +23,26 @@ class ComicsController < ApplicationController
         render :new
       end
     end
-  #
-  # def edit
-  #   @comic = Comic.find(params[:id])
-  # end
-  #
-  # def update
-  #   @comic = Comic.find(params[:id])
-  #   if @comic.update(comic_params)
-  #     redirect_to comics_path
-  #   else
-  #     render :edit
-  #   end
-  # end
-  #
-  # def destroy
-  #   @comic = Comic.find(params[:id])
-  #   @comic.destroy
-  #   redirect_to comics_path
-  # end
-  #
+  
+  def edit
+    @comic = Comic.find(params[:id])
+  end
+
+  def update
+    @comic = Comic.find(params[:id])
+    if @comic.update(comic_params)
+      redirect_to comics_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @comic = Comic.find(params[:id])
+    @comic.destroy
+    redirect_to comics_path
+  end
+
   private
 
     def comic_params

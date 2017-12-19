@@ -1,5 +1,5 @@
 class ComicsController < ApplicationController
-  before_action :authorize, only: [:index]
+  before_action :authorize, only: [:new, :edit]
   # before_action :authorize_admin, only: [:new, :edit]
   def index
     @comic = Comic.all
@@ -23,26 +23,26 @@ class ComicsController < ApplicationController
         render :new
       end
     end
-  #
-  # def edit
-  #   @comic = Comic.find(params[:id])
-  # end
-  #
-  # def update
-  #   @comic = Comic.find(params[:id])
-  #   if @comic.update(comic_params)
-  #     redirect_to comics_path
-  #   else
-  #     render :edit
-  #   end
-  # end
-  #
-  # def destroy
-  #   @comic = Comic.find(params[:id])
-  #   @comic.destroy
-  #   redirect_to comics_path
-  # end
-  #
+  
+  def edit
+    @comic = Comic.find(params[:id])
+  end
+
+  def update
+    @comic = Comic.find(params[:id])
+    if @comic.update(comic_params)
+      redirect_to comics_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @comic = Comic.find(params[:id])
+    @comic.destroy
+    redirect_to comics_path
+  end
+
   private
 
     def comic_params

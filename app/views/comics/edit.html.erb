@@ -1,0 +1,23 @@
+<h1>Edit <%= @comic.title %></h1>
+<%= form_for @comic do |f| %>
+<div class="field">
+  <div class="form-group">
+      <%= f.label :cover, class: 'col-sm-2 control-label'  %>
+      <div class="col-sm-6">
+          <%= f.file_field :cover %>
+      </div>
+  </div>
+  <br><br>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+</div>
+<div class="actions">
+  <%= f.submit "Update" %>
+</div>
+
+<button class="btn ">
+  <%= link_to "Delete This Location", comic_path(@comic),
+                    :data => {:confirm => "Are you sure?",
+                    :method => "delete"} %>
+                  </button>
+<% end %>

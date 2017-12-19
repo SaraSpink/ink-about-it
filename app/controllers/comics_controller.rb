@@ -1,5 +1,5 @@
 class ComicsController < ApplicationController
-  # before_action :authorize, only: [:index]
+  before_action :authorize, only: [:index]
   # before_action :authorize_admin, only: [:new, :edit]
   def index
     @comic = Comic.all
@@ -16,7 +16,7 @@ class ComicsController < ApplicationController
   def create
     @comic = current_user.comics.create(comic_params)
 
-      if @comic.save!
+      if @comic.save
         flash[:notice] = "Comic Successfully Added"
         redirect_to comics_path
       else

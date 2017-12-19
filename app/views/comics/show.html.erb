@@ -1,0 +1,10 @@
+<%= image_tag(@comic.cover.url(:original)) %>
+<h1><%=@comic.title%></h1>
+
+<br>
+<br>
+
+  <button class="btn btn-info"><%= link_to "Go Back to All Comics", comics_path %></button>
+<br><br>
+
+  <button class="btn btn-info"><%= link_to "Edit Comic", edit_comic_path(@comic) %></button>

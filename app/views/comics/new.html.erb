@@ -1,0 +1,23 @@
+<h1>Start Your Comic!</h1>
+<%= form_for @comic do |f| %>
+<div class="form-group">
+    <%= f.label :cover, class: 'col-sm-2 control-label'  %>
+    <div class="col-sm-6">
+        <%= f.file_field :cover %>
+    </div>
+</div>
+<br><br>
+<div class="field">
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+</div>
+
+<div class="field">
+  <%= f.label :description %><br />
+  <%= f.text_field :description %>
+</div>
+
+<div class="actions">
+  <%= f.submit "Create" %>
+</div>
+<% end %>

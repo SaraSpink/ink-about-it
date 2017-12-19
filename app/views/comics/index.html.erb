@@ -1,2 +1,16 @@
-<h1>index works</h1>
-here is where the list of comics will go
+<h1>Ink About It</h1>
+
+
+<ul style="list-style-type:none">
+  <h2>Available Comics:</h2>
+   <% @comic.each do |comic| %>
+   <li>
+     <div class="well">
+       <b><%= comic.title %></b>
+    
+   </li>
+   <% end %>
+ </ul>
+
+
+   <button class="btn btn-info"><%= link_to "Create a comic", new_comic_path %></button>

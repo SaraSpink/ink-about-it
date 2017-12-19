@@ -1,5 +1,5 @@
 class ComicsController < ApplicationController
-  before_action :authorize, only: [:index]
+  before_action :authorize, only: [:new, :edit]
   # before_action :authorize_admin, only: [:new, :edit]
   def index
     @comic = Comic.all

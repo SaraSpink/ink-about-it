@@ -23,7 +23,7 @@ class ComicsController < ApplicationController
         render :new
       end
     end
-  
+
   def edit
     @comic = Comic.find(params[:id])
   end

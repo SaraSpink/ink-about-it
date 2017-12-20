@@ -1,0 +1,25 @@
+<h1 id="comics"><%= @comic.title %></h1>
+
+<div class="container">
+
+<ul style="list-style-type:none">
+  <h2>All Pages:</h2>
+   <% @page.each do |page| %>
+   <li>
+     <div class="well">
+       <b><%= page.number %></b>
+       <br>
+
+       <%= image_tag(page.image.url(:thumb)) %>
+       <br>
+      <%= link_to "Check it out", comic_page_path(comic) %>
+
+   </li>
+   <% end %>
+ </ul>
+
+
+   <button class="btn btn-info"><%= link_to "Add Page", new_comic_page_path %></button>
+
+   <button type="button" name="button">Eventually link to next page</button>
+ </div>

@@ -16,6 +16,10 @@ _Ink about it is a dedicated web-comics publishing platform. Many people publish
 I started by sketching out my database schema digitally:
 ![first db schema](./public/img/initial_db_sketch.png)
 
+After setting up the database and making sure users could log in, create a Comic and add pages to their project, I worked on getting a uniform style in place:
+![comics index page](./public/img/comics-index.png)
+![user sign up](./public/img/edit-user.png)
+
 ### User Stories
 
 - A user should be able to create a comic with a title and details

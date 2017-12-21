@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   # before_action :authorize_admin, only: [:new, :edit]
   def index
     @comic =Comic.find(params[:comic_id])
-    @page = Page.all
+    @page = @comic.pages.all
   end
 
   def show

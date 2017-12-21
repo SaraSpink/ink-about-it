@@ -10,16 +10,16 @@
          <%= image_tag(comic.cover.url(:thumb)) %>
        </div>
        <div class="col-sm-9">
-         <b><%= comic.title %></b>
+         <h3 id="marker"><%= comic.title %></h3>
          <br>
-         <b><%= comic.user.email %></b>
+         <b>by <%= comic.user.email %></b>
          <br>
-         <%= link_to "Check it out", comic_path(comic) %>
+         <%= link_to "Read it!", comic_path(comic) %>
        </div>
    </li>
    <% end %>
  </ul>
 
-   <button class="btn btn-lg btn-primary"><%= link_to "Create a comic", new_comic_path %></button>
+   <button class="btn btn-lg btn-primary"><%= link_to "Create a comic", new_comic_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %></button>
 
  </div>

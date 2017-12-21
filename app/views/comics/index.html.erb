@@ -1,29 +1,25 @@
-
-
-
-<div class="container">
-  <div class="title_container">
-
-    <h1 id="comics">Ink About It</h1>
-  </div>
-
+<div class="title_container">
+  <h1 id="comics">All Comics</h1>
+</div>
+<div class="welcome_container">
 <ul style="list-style-type:none">
-  <h2>Available Comics:</h2>
    <% @comic.each do |comic| %>
    <li>
-     <div class="well">
-       <b><%= comic.title %></b>
-       <br>
-       <b><%= comic.user.email %></b>
-       <%= image_tag(comic.cover.url(:thumb)) %>
-       <br>
-      <%= link_to "Check it out", comic_path(comic) %>
-
+     <div class="row">
+       <div class="col-sm-3">
+         <%= image_tag(comic.cover.url(:thumb)) %>
+       </div>
+       <div class="col-sm-9">
+         <b><%= comic.title %></b>
+         <br>
+         <b><%= comic.user.email %></b>
+         <br>
+         <%= link_to "Check it out", comic_path(comic) %>
+       </div>
    </li>
    <% end %>
  </ul>
 
-
-   <button class="btn btn-info"><%= link_to "Create a comic", new_comic_path %></button>
+   <button class="btn btn-lg btn-primary"><%= link_to "Create a comic", new_comic_path %></button>
 
  </div>

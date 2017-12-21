@@ -1,6 +1,8 @@
-<h1 id="comics"><%= @comic.title %></h1>
 
 <div class="container">
+  <div class="title_container">
+    <h1 id="comics"><%= @comic.title %></h1>
+  </div>
 
 <ul style="list-style-type:none">
   <h2>All Pages:</h2>
@@ -12,7 +14,7 @@
 
        <%= image_tag(page.image.url(:thumb)) %>
        <br>
-    
+
    </li>
    <% end %>
  </ul>

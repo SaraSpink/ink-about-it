@@ -17,7 +17,7 @@
 
 body {
   font-family: 'Pangolin', cursive;
-  background: linear-gradient(transparent, green) no-repeat center center fixed, url(comics_bg_whole.jpg) no-repeat center center fixed;
+  background: linear-gradient(#ddf4ff, transparent, #ddf4ff) no-repeat center center fixed, url(comics_bg_whole.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,9 +28,6 @@ body {
   font-family: 'Pangolin', cursive;
 }
 
-h1 {
-  font-family: 'Shadows Into Light', cursive;
-}
 .round-image-50 {
    background-color: white;
    border: 1px solid #d9d9d9;

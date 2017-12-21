@@ -1,7 +1,14 @@
 // Place all the styles related to the comics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1 {
-   color: blue;
+.title_container {
+   color: Black;
+   text-shadow: 2px 3px #ffffff;
    text-align: center;
+   padding-top: 30px;
+   padding-left: 30px;
+   padding-bottom: 50px;
+   padding-right: 30px;
+   font-family: 'Permanent Marker', cursive;
+   background: radial-gradient(#ddf4ff, transparent, transparent);
  }

@@ -6,44 +6,25 @@ class PagesController < ApplicationController
     @page = Page.all
   end
 
-#   def show
-#     @page =Page.find(params[:id])
-#   end
-#
+  def show
+    @page =Page.find(params[:id])
+  end
+
   def new
     @comic =Comic.find(params[:comic_id])
-    @page = Page.new
+
+    @page = @comic.pages.new
   end
-#
-# #   def create
-# #     @page = current_user.pages.create(page_params)
-# # binding.pry
-# #       if @page.save
-# #         flash[:notice] = "Page Successfully Added"
-# #         redirect_to pages_path
-# #       else
-# #         render :new
-# #       end
-# #     end
-#
-#   def edit
-#     @page = Page.find(params[:id])
-#   end
-#
-#   def update
-#     @page = Page.find(params[:id])
-#     if @page.update(page_params)
-#       redirect_to pages_path
-#     else
-#       render :edit
-#     end
-#   end
-#
-#   def destroy
-#     @page = Page.find(params[:id])
-#     @page.destroy
-#     redirect_to pages_path
-#   end
+
+  def create
+    @comic = Comic.find(params[:comic_id])
+    @page = @comic.pages.new(page_params)
+    if @page.save
+      redirect_to comic_pages_path(@page.comic)
+    else
+      render :new
+    end
+  end
 
   private
 

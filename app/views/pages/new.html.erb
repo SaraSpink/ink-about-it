@@ -1,0 +1,18 @@
+<h1>Add Pages</h1>
+<%= form_for [@comic, @page] do |f| %>
+<div class="form-group">
+    <%= f.label :image, class: 'col-sm-2 control-label'  %>
+    <div class="col-sm-6">
+        <%= f.file_field :image %>
+    </div>
+</div>
+<br><br>
+<%= f.hidden_field :comic_id %>
+
+<%= f.label :number %>
+<%= f.number_field :number %>
+
+<div class="actions">
+  <%= f.submit "Create" %>
+</div>
+<% end %>

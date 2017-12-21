@@ -11,7 +11,7 @@
      <div class="well">
        <b><%= comic.title %></b>
        <br>
-
+       <b><%= comic.user.email %></b>
        <%= image_tag(comic.cover.url(:thumb)) %>
        <br>
       <%= link_to "Check it out", comic_path(comic) %>

@@ -13,8 +13,10 @@
 
   <body>
     <%= render "layouts/menu" %>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
+    <div class="container">
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -1,17 +1,17 @@
-<h2>register</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="title_container">
+  <h2>Sign Up</h2>
+</div>
+<div class="welcome_container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="form-group">
-     <%= f.label :avatar, class: 'col-sm-2 control-label'  %>
-     <div class="col-sm-6">
-         <%= f.file_field :avatar %>
-     </div>
-   </div>
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
 
-   <br>
-   <br>
+  <br>
+  <br>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -31,9 +31,13 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+  <br>
+  <br>
 
-<%= render "devise/shared/links" %>
+  <div class="actions">
+    <%= f.submit "Sign up", :class => "btn btn-lg btn-primary" %>
+  </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>

@@ -19,7 +19,7 @@
   padding-top: 50px;
   padding-left: 60px;
   padding-right: 60px;
-  padding-bottom: 30px;
+  padding-bottom: 45px;
   margin-top: 10px;
   margin-left: 33%;
   margin-right: 33%;
@@ -29,6 +29,11 @@
   font-family: 'Permanent Marker', cursive;
 }
 
+.center {
+  text-align: right;
+}
+
 .btn-primary, .btn-primary:visited {
     background-color: #468aaa;
+    padding: 10px;
 }

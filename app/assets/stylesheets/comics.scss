@@ -25,6 +25,17 @@
   margin-right: 33%;
 }
 
+.cover {
+  background: rgba(249,253,255,0.86);
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 60px;
+
+}
+
 #marker {
   font-family: 'Permanent Marker', cursive;
 }
@@ -37,7 +48,6 @@
     background-color: #468aaa;
     padding: 10px;
 }
-
 
 hr.style18 {
   height: 30px;

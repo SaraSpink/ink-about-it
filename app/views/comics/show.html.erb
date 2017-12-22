@@ -1,6 +1,12 @@
-<%= image_tag(@comic.cover.url(:original)) %>
-<h1><%=@comic.title%></h1>
-
+<div class="title_container">
+  <h1><%=@comic.title%></h1>
+</div>
+<div class="cover">
+  <%= image_tag(@comic.cover.url(:original)) %>
+</div>
+<div class="title_container">
+  <h1>By <%=@comic.user.email%></h1>
+</div>
 <br>
 <br>
 
